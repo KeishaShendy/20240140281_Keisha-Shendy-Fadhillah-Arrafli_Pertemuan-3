@@ -1,0 +1,150 @@
+:root {
+    --blue: #4f46e5;
+    --dark: #1e1b4b;
+    --gray: #64748b;
+    --line: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    color: var(--gray);
+    background: #f8fafc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    border-bottom: 2px solid var(--line);
+}
+
+h1, h2, h3 {
+    color: var(--dark);
+}
+
+h1 { margin: 0; }
+
+span {
+    color: var(--blue);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px;
+    border-bottom: 2px solid var(--line);
+}
+
+.hero h2 {
+    font-size: 42px;
+}
+
+.hero a, button {
+    padding: 12px 20px;
+    background: var(--blue);
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+#fitur, #form {
+    padding: 60px 25px;
+    background: white;
+    border-bottom: 2px solid var(--line);
+}
+
+.fitur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+article {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+#fitur h2, #form h2 {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid var(--blue);
+}
+
+fieldset {
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+button {
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--dark);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero, .fitur {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+}
